@@ -1,0 +1,6 @@
+ASSUMPTIONS
+
+For the 4th story, there following assupmtions were made:
+- The fields came in the same order on the file
+- The Publisher's Name needs to be passed to the rake task so it could be searched/ created
+- If there's no end date, the start date will be stored as end date, so that the import of the record doesn't fails 

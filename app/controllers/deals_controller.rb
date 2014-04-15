@@ -49,6 +49,10 @@ class DealsController < ApplicationController
   end
 
   def set_view_paths
-    prepend_view_path "app/themes/#{@deal.advertiser.publisher.theme}/views"
+    if /entertainment\-.*/.match @deal.advertiser.publisher.theme 
+      prepend_view_path "app/themes/entertainment/views"
+    else
+      prepend_view_path "app/themes/#{@deal.advertiser.publisher.theme}/views"
+    end
   end
 end
